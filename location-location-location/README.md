@@ -38,13 +38,13 @@ The best way of giving you a comprehensive overview of how this widget functions
 
 
 **How much data does it use?**
-Assuming you're using the large widget (which features `TILES = 4×4 = 16` map tiles which weigh about `SIZE = 15` kilobytes each), have configured it to update every `INTERVAL = 10` minutes and are moving around `ACTIVE = 16` hours a day in areas for which imagery has not yet been cached, then your data usage each day is about
+Assuming you're using the large widget (which features `tiles = 4×4 = 16` map tiles which weigh about `size = 15` kilobytes each), have configured it to update every `interval = 10` minutes and are moving around `active = 16` hours a day in areas for which imagery has not yet been cached, then your data usage each day is about
 
 > `tiles` × `size` × (60 × `active`) / `interval`  
 > = `16` × `15` × (60 × `18`) / `10`  
 > ≈ 25.9 megabytes
 
-which is significant if you're data-limited – but that's really an extreme case. If, instead, you mostly stay at home (`ACTIVE = 3` hours), are using the small widget (`TILES = 2×2 = 4`) and have stuck with the default update schedule (`INTERVAL = 30` minutes), things look much more insignificant:
+which is significant if you're data-limited – but that's really an extreme case. If, instead, you mostly stay at home (`active = 3` hours), are using the small widget (`tiles = 2×2 = 4`) and have stuck with the default update schedule (`interval = 30` minutes), things look much more insignificant:
 
 > `tiles` × `size` × (60 × `active`) / `interval`  
 > = `4` × `15` × (60 × `3`) / `30`  
