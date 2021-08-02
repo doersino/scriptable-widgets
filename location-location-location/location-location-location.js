@@ -426,7 +426,7 @@ if (config.widgetFamily == "medium") {
 let cache = new Cache(cacheLocation, "location-location-location-cache");
 await cache.purgeTilesOlderThanDays(cacheDuration);
 
-await cache.consoleLogCacheStats();
+//await cache.consoleLogCacheStats();
 
 let tileLoader = new TileLoader(cache);
 await tileLoader.determineCurrentVersion();
