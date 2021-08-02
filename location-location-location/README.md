@@ -3,7 +3,7 @@
 *Scriptable widget that shows your current location using satellite imagery from Google Maps.*
 
 **Why?**
-Before discovering [Scriptable](https://scriptable.app), I [had been using](https://twitter.com/doersino/status/1419752656273281037) the Apple Maps widget on my homescreen – but once I acquired a commute, its ML circuitry activated and cluttered the widget with incorrect and mistimed route estimates. What's more, I much prefer aerial imagery over a standard map view, which has led me to develop a [number](https://github.com/doersino/aerialbot) of [projects](https://github.com/doersino/gomati) that [utilize](https://github.com/doersino/google-maps-at-88-mph) this [imagery](https://github.com/doersino/earthacrosstime) in various ways.
+Before discovering [Scriptable](https://scriptable.app), I [had been using](https://twitter.com/doersino/status/1419752656273281037) the Apple Maps widget on my homescreen – but once I acquired a commute, its ML circuitry activated and cluttered the widget with incorrect and mistimed route estimates. What's more, I much prefer aerial imagery over a standard map view, which has led me to [develop](https://github.com/doersino/scriptable-widgets/tree/main/aerialbot-lite) a [number](https://github.com/doersino/aerialbot) of [projects](https://github.com/doersino/gomati) that [utilize](https://github.com/doersino/google-maps-at-88-mph) this [imagery](https://github.com/doersino/earthacrosstime) in various ways.
 
 
 **Show me!**
