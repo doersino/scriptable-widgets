@@ -6,7 +6,7 @@ This repository holds a [monotonically non-decreasing](https://en.wikipedia.org/
 
 [![](aerialbot-lite/demo.png)](aerialbot-lite/)
 
-[![](read-statistics/demo.png)](read-statistics/)
+[![](read-statistics/demo.jpg)](read-statistics/)
 
 
 ## Setup
