@@ -6,7 +6,6 @@
 Back in 2013, dissatisfied with existing read-it-later services, I've built [ReAD](https://github.com/doersino/ReAD) – having implemented a bunch of ancillary functionality over the years, I still use it every day. This widget uses ReAD's API to display basic statistics about the day's reading activities. As far as I'm aware, the only user of ReAD is yours truly, so this widget probably isn't for you.
 
 ![](demo.jpg)
-
 <sup>(Yes, as of mid-2021, I still use an iPhone 7. Works just fine, although the battery's getting a bit weak.)</sup>
 
 
