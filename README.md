@@ -8,6 +8,8 @@ This repository holds a [monotonically non-decreasing](https://en.wikipedia.org/
 
 [![](read-statistics/demo.jpg)](read-statistics/)
 
+[![](binary-date/demo.jpg)](binary-date/)
+
 
 ## Setup
 
