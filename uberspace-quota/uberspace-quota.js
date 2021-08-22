@@ -84,7 +84,7 @@ try {
 }
 
 // compute data that we'll show
-const usedGigabytes = `${(data.used / 1024 / 1024).toString().substring(0,5)}\u2002GB`;
+const usedGigabytes = `${(Math.round(1000 * (data.used / 1024 / 1024)) / 1000).toString().substring(0,5)}\u2002GB`;
 const freePercent = `${Math.round(1000 * (1 - data.used / data.total)) / 10}%`;
 const fileCount = data.files;
 
