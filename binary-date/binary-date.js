@@ -54,7 +54,7 @@ for (let i = 0; i < stars; i++) {
 const date = new Date();
 const weekday = date.getDay() != 0 && date.getDay() != 6;  // because sunday is at the start of the week, obviously
 const day = date.getDate().toString(2).padStart(5, "0");
-const month = date.getMonth().toString(2).padStart(4, "0");
+const month = (date.getMonth() + 1).toString(2).padStart(4, "0");  // `+ 1` because unlike `.getDate()` (day of month), which starts at 1 as you'd expect, `.getMonth()` (month of year) starts at 0 as you wouldn't expect
 const year = date.getFullYear().toString(2).padStart(12, "0");
 
 // figure out coordinates of the top-left-most block
