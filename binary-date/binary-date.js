@@ -99,7 +99,7 @@ let widget = new ListWidget();
 widget.backgroundColor = new Color(backgroundColor);
 widget.backgroundImage = backgroundImage;
 
-// request widget to refreshed tomorrow, one minute after midnight
+// request widget to be refreshed tomorrow, one minute after midnight
 let justAfterMidnight = new Date();
 justAfterMidnight.setHours(24, 1, 0, 0);
 widget.refreshAfterDate = justAfterMidnight;
