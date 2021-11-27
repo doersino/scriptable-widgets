@@ -12,6 +12,8 @@ This repository holds a [monotonically non-decreasing](https://en.wikipedia.org/
 
 [![](uberspace-quota/demo.jpg)](uberspace-quota/)
 
+[![](small-seasons/demo.jpg)](small-seasons/)
+
 
 ## Setup
 
