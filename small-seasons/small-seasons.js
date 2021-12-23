@@ -266,8 +266,9 @@ const data = {
 let currentDate = new Date();
 let sekki = null;
 for (let i = 0; i < data["sekki"].length; i++) {
-  let startDate = data["sekki"][i].startDate.split("-");
-  let startDateDate = new Date(currentDate.getFullYear(), startDate[0] - 1, startDate[1]);
+  const startDate = data["sekki"][i].startDate.split("-");
+  const startDateYear = currentDate.getMonth() != 0 && startDate[0] == "01" ? currentDate.getFullYear() + 1 : currentDate.getFullYear();  // fix for sekki at the beginning of next year
+  const startDateDate = new Date(startDateYear, startDate[0] - 1, startDate[1]);
   if (startDateDate > currentDate) break;
   sekki = data["sekki"][i];
 }
