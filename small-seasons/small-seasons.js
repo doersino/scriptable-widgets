@@ -262,15 +262,46 @@ const data = {
   ]
 };
 
-// determine current sekki
-let currentDate = new Date();
+// determine current sekki really inelegantly
+const currentDate = new Date();
+//currentDate = new Date("30 Dec 2021 15:00:00 GMT");  // test, should be 冬至
+//currentDate = new Date("02 Jan 2022 15:00:00 GMT");  // test, should be 冬至
+//currentDate = new Date("06 Jan 2022 15:00:00 GMT");  // test, should be 小寒
+//currentDate = new Date("20 Jan 2022 15:00:00 GMT");  // test, should be 大寒
+//currentDate = new Date("1 Feb 2022 15:00:00 GMT");   // test, should be 大寒
+//currentDate = new Date("4 Feb 2022 15:00:00 GMT");   // test, should be 立春
+
+let lookupMonth = currentDate.getMonth() + 1;  // 0-indexed, hence + 1
+let lookupDay = currentDate.getDate();         // 1-indexed
+
+let sekkiDay, sekkiMonth;
 let sekki = null;
-for (let i = 0; i < data["sekki"].length; i++) {
-  const startDate = data["sekki"][i].startDate.split("-");
-  const startDateYear = currentDate.getMonth() != 0 && startDate[0] == "01" ? currentDate.getFullYear() + 1 : currentDate.getFullYear();  // fix for sekki at the beginning of next year
-  const startDateDate = new Date(startDateYear, startDate[0] - 1, startDate[1]);
-  if (startDateDate > currentDate) break;
-  sekki = data["sekki"][i];
+
+while (!sekki) {
+
+  // check if the date matches any of the entries
+  for (let i = 0; i < data["sekki"].length; i++) {
+    [sekkiMonth, sekkiDay] = data["sekki"][i].startDate.split("-").map(n => parseInt(n));
+
+    // if so, dial in the match and break out of the loop
+    if (lookupDay == sekkiDay && lookupMonth == sekkiMonth) {
+      sekki = data["sekki"][i];
+      break;
+    }
+  }
+
+  // if no match was found, decrement date (semi-correctly across month [there's
+  // no 31st february, for example, but that won't impact the result; it'll just
+  // burn cycles] and year boundaries) and retry
+  lookupDay -= 1;
+  if (lookupDay == 0) {
+    lookupDay = 31;
+    lookupMonth -= 1;
+  }
+  if (lookupMonth == 0) {
+    lookupDay = 31;
+    lookupMonth = 12;
+  }
 }
 
 // load background image
