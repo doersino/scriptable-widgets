@@ -21,4 +21,4 @@ Each time the script runs, it generates a random location, picks a random zoom l
 
 * Note that the script is designed to power small widgets only – wide or large ones work *technically* fine, but things will look *really* blurry.
 * Also note that this script directly accesses map tiles that are really supposed to be accessed through an API (more at the bottom of [this](https://github.com/doersino/scriptable-widgets/tree/main/location-location-location) document), so it could break at any point.
-* You also need to keep the map tile version up to date, see the code for more – that'll require manual intervention only about once a year or so. (For simplicity's sake, I decided againt determining it automatically.)
+* You also need to keep the map tile version up to date, see the code for more – that'll require manual intervention only about once a year or so. (For simplicity's sake, I decided against determining it automatically.)
