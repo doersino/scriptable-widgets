@@ -335,7 +335,7 @@ class TileLoader {
         // current version at the time of implementation (would love to
         // determine the now-current version here, but async calls in a
         // constructor are fraught)
-        this.version = 908;
+        this.version = 934;
     }
 
     // determine current version either from cache, or from web, or use default
