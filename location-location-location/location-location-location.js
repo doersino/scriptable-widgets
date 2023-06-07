@@ -50,6 +50,9 @@ const cacheDuration = 30;  // days
 // frequently)
 const updateInterval = 30;  // minutes
 
+// fallback map tile version
+const fallbackVersion = 949;
+
 ////////////////////////////////////////////////////////////////////////////////
 
 const radians = d => d * (Math.PI / 180);
@@ -335,7 +338,7 @@ class TileLoader {
         // current version at the time of implementation (would love to
         // determine the now-current version here, but async calls in a
         // constructor are fraught)
-        this.version = 934;
+        this.version = fallbackVersion;
     }
 
     // determine current version either from cache, or from web, or use default
