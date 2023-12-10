@@ -21,7 +21,7 @@
 const showCoordinates = true;
 
 // update this occasionally
-const version = 949;
+const version = 962;
 
 ////////////////////////////////////////////////////////////////////////////////
 
