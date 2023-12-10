@@ -51,7 +51,7 @@ const cacheDuration = 30;  // days
 const updateInterval = 30;  // minutes
 
 // fallback map tile version
-const fallbackVersion = 949;
+const fallbackVersion = 962;
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -379,10 +379,17 @@ class TileLoader {
     async download(tileCoords) {
         const req = await new Request(this.url(tileCoords));
 
+        // load image, throwing an error on anything but success and "not found"
+        const tileData = await req.load();
+        const status = req.response.statusCode;
+        if (status != 200 && status != 404) {
+            const response = tileData.toRawString();
+            throw `unexpected status code ${status}, response: ${response}`;
+        }
+
         // cache original jpeg data (if the image object was cached instead,
         // it'd be roughly 10x larger since it'd be stored as a png (or
         // alternatively, lossily reencoded))
-        const tileData = await req.load();
         this.cache.writeTile(tileCoords, this.version, tileData);
 
         // return tile as image object
@@ -580,6 +587,7 @@ if (mapLoadingSuccessful) {
         let y = Math.floor(i / horizontalTiles);
 
         ctx.drawImageInRect(tileImage, new Rect(x * 256, y * 256, 256, 256));
+        //ctx.drawImageAtPoint(tileImage, new Point(x * 256, y * 256));
     });
 } else {
 
