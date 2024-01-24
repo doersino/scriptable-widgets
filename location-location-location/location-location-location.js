@@ -645,6 +645,7 @@ const backgroundImage = ctx.getImage();
 
 // render it as part of a widget
 let widget = new ListWidget();
+widget.backgroundColor = new Color("#111");
 widget.backgroundImage = backgroundImage;
 widget.url = geoPoint.googleMapsUrlAt(widgetType == "large" ? (zoom - 2) : (zoom - 1));
 

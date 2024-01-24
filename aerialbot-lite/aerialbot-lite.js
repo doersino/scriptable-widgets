@@ -112,7 +112,7 @@ if (tries == 0) {
 
 // render map tile as part of a widget
 let widget = new ListWidget();
-widget.backgroundColor = new Color("#000");
+widget.backgroundColor = new Color("#111");
 widget.backgroundImage = tile;
 widget.url = `https://www.google.com/maps/@${geoPoint.lat},${geoPoint.lon},${tileCoords.z}z`;
 
