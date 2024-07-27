@@ -3,7 +3,7 @@
 *Scriptable widget that shows a random location in the world.*
 
 **Why?**
-Because [after](https://twitter.com/doersino/status/1418647087449784330) discovering [Scriptable](https://scriptable.app) and its JavaScript-powered widgets, I decided to try and get to know it by reimplementing something I've built previously – which ended up being [ærialbot](https://botsin.space/@aerialbot), a Mastodon bot that regularly posts satellite imagery of random locations in the world. This widget accordingly downloads a random map tile from Google Maps and displays it along with its latitude and longitude.
+Because after discovering [Scriptable](https://scriptable.app) and its JavaScript-powered widgets, I decided to try and get to know it by reimplementing something I've built previously – which ended up being [ærialbot](https://botsin.space/@aerialbot), a Mastodon bot that regularly posts satellite imagery of random locations in the world. This widget accordingly downloads a random map tile from Google Maps and displays it along with its latitude and longitude.
 
 
 **Show me!**
