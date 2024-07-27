@@ -3,7 +3,7 @@
 *Scriptable widget that displays your Uberspace's disk usage ("quota").*
 
 **Huh?**
-I host a bunch of stuff on [Uberspace](https://uberspace.de/en/), an excellent German shared hosting provider that's pay-what-you-want, yet provides many more features than competing products. Some of the projects I host there – [various](https://github.com/doersino/earthacrosstime) [Twitter](https://github.com/doersino/aerialbot) [bots](https://github.com/doersino/sundryautomata), above anything else – generate a bunch of data that I regularly-but-not-frequently need to clean up manually. To make sure I don't forget about that, this widget helps me keep tabs on disk usage.
+I host a bunch of stuff on [Uberspace](https://uberspace.de/en/), an excellent German shared hosting provider that's pay-what-you-want, yet provides many more features than competing products. Some of the projects I host there – various [Mastodon](https://botsin.space/@aerialbot) [bots](https://botsin.space/@sundryautomata), above anything else – generate a bunch of data that I regularly-but-not-frequently need to clean up manually. To make sure I don't forget about that, this widget helps me keep tabs on disk usage.
 
 ![](demo.jpg)
 
