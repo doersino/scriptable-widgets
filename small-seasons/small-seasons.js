@@ -9,12 +9,17 @@
 //   description. This data is sourced from https://smallseasons.guide or rather
 //   https://github.com/rosszurowski/small-seasons/blob/master/data/content.json
 //   and is licensed under the MIT License, © 2018 Ross Zurowski.
+// - Korean (Jeolgi) names have been added based on various sources, e.g.
+//   https://english.seoul.go.kr/service/amusement/traditional-culture/.
 // - The background image "small-seasons-background.png" must be located next to
 //   this script and was taken from a woodblock print included in volume 10,
 //   issue 5 of "Bungei Kurabu", published in Meiji 37 (1904) and downloaded
 //   from the Mokuhankan Collection (& licensed under the CC BY-NC License):
 //   https://mokuhankan.com/collection/index.php?id_for_display=00038-004
 // - Licensed under the MIT License.
+
+// you can choose between "japanese" (Sekki) and "korean" (Jeolgi)
+const language = "japanese"
 
 // data, source see above
 const data = {
@@ -27,7 +32,9 @@ const data = {
       "startDate": "02-04",
       "notes": "Ground thaws, fish appear under ice.",
       "description": "First hints of an approaching spring. The ground begins to thaw, fish appear in their icy ponds and the bush warblers start singing in the mountains.",
-      "season": "spring"
+      "season": "spring",
+      "hangul": "입춘",
+      "hangulRomanized": "Ipchun"
     },
     {
       "id": "usui",
@@ -37,7 +44,9 @@ const data = {
       "startDate": "02-18",
       "notes": "Snow recedes, mist lingers in the air.",
       "description": "Snow recedes, mist lingers in the air, and the grasses begin to sprout. Trees release their first buds as the ground soaks up meltwater.",
-      "season": "spring"
+      "season": "spring",
+      "hangul": "우수",
+      "hangulRomanized": "Usu"
     },
     {
       "id": "keichitsu",
@@ -47,7 +56,9 @@ const data = {
       "startDate": "03-06",
       "notes": "Bugs surface from hibernation.",
       "description": "That time of year when the first bugs surface from their hibernation. Caterpillars start their transformation to butterflies.",
-      "season": "spring"
+      "season": "spring",
+      "hangul": "경칩",
+      "hangulRomanized": "Gyeongchip"
     },
     {
       "id": "shunbun",
@@ -57,7 +68,9 @@ const data = {
       "startDate": "03-21",
       "notes": "Sparrows start to nest, cherry blossoms bloom.",
       "description": "When winter is gone and spring starts. Sparrows begin to nest in the trees. Cherry blossoms start to bloom. Heavy rains bring distant thunder.",
-      "season": "spring"
+      "season": "spring",
+      "hangul": "춘분",
+      "hangulRomanized": "Chunbun"
     },
     {
       "id": "seimei",
@@ -67,7 +80,9 @@ const data = {
       "startDate": "04-04",
       "notes": "Geese fly north, the first rainbows of the year appear.",
       "description": "Shortly after the equinox, when the swallows return home and the geese fly north. The first rainbows of the season appear.",
-      "season": "spring"
+      "season": "spring",
+      "hangul": "청명",
+      "hangulRomanized": "Cheongmyeong"
     },
     {
       "id": "koku",
@@ -77,7 +92,9 @@ const data = {
       "startDate": "04-21",
       "notes": "Reeds sprout by rivers, rice seedlings grow.",
       "description": "Reeds sprout by the rivers and rice seedlings grow in the fields after the last frost has passed. Peonies bloom in the wilderness.",
-      "season": "spring"
+      "season": "spring",
+      "hangul": "곡우",
+      "hangulRomanized": "Gogu"
     },
     {
       "id": "rikka",
@@ -87,7 +104,9 @@ const data = {
       "startDate": "05-06",
       "notes": "Birds and frogs start the songs of summer.",
       "description": "The songs of summer begin. Frogs start their singing, and birds chirp in the forests. Worms surface from underground, bamboo shoots begin to sprout.",
-      "season": "summer"
+      "season": "summer",
+      "hangul": "입하",
+      "hangulRomanized": "Ipha"
     },
     {
       "id": "shoman",
@@ -97,7 +116,9 @@ const data = {
       "startDate": "05-21",
       "notes": "Flowers and plants bloom, wheat ripens.",
       "description": "When flowers and plants start to come out. Silkworms start feasting on mulberry leaves, and the safflower workers start their picking. Wheat begins to ripen.",
-      "season": "summer"
+      "season": "summer",
+      "hangul": "소만",
+      "hangulRomanized": "Soman"
     },
     {
       "id": "boshu",
@@ -107,7 +128,9 @@ const data = {
       "startDate": "06-05",
       "notes": "Praying mantises hatch, fireflies come out. Time to seed the soil.",
       "description": "The time of year when people start to seed the soil. Praying mantises hatch. Rotten grass become home to fireflies. The plums become more yellow.",
-      "season": "summer"
+      "season": "summer",
+      "hangul": "망종",
+      "hangulRomanized": "Mangjong"
     },
     {
       "id": "geshi",
@@ -117,7 +140,9 @@ const data = {
       "startDate": "06-21",
       "notes": "Longest days of the year, irises bloom.",
       "description": "The longest days of the year. The sun reaches its highest point, accompanied by mist and rains. A sweet woodsy dryness hangs in the air. Irises bloom and crow-dippers start to sprout.",
-      "season": "summer"
+      "season": "summer",
+      "hangul": "하지",
+      "hangulRomanized": "Haji"
     },
     {
       "id": "shousho",
@@ -127,7 +152,9 @@ const data = {
       "startDate": "07-07",
       "notes": "Warm winds blow, young hawks learn to fly.",
       "description": "The summer heat begins. Warm winds blow, lotus' blossom, and young hawks are learning to fly.",
-      "season": "summer"
+      "season": "summer",
+      "hangul": "소서",
+      "hangulRomanized": "Soseo"
     },
     {
       "id": "taisho",
@@ -137,7 +164,9 @@ const data = {
       "startDate": "07-23",
       "notes": "Summer heat at its strongest, accompanied by great rains.",
       "description": "Summer heat is at its strongest, followed by great rains. The air is thick and humid and the trees are busy making seeds.",
-      "season": "summer"
+      "season": "summer",
+      "hangul": "대서",
+      "hangulRomanized": "Daeseo"
     },
     {
       "id": "risshu",
@@ -147,7 +176,9 @@ const data = {
       "startDate": "08-08",
       "notes": "Cooler winds blow, thick fogs roll through hills.",
       "description": "The first signs of autumn can be seen. Cooler winds blow, and thick fogs roll through the hills in the morning.",
-      "season": "autumn"
+      "season": "autumn",
+      "hangul": "입추",
+      "hangulRomanized": "Ipchu"
     },
     {
       "id": "shosho",
@@ -157,7 +188,9 @@ const data = {
       "startDate": "08-23",
       "notes": "Rice has ripened, the heat of summer, forgotten.",
       "description": "The heat of summer has been forgotten. The rice has ripened and cotton flowers are in bloom.",
-      "season": "autumn"
+      "season": "autumn",
+      "hangul": "처서",
+      "hangulRomanized": "Cheoseo"
     },
     {
       "id": "hakuro",
@@ -167,7 +200,9 @@ const data = {
       "startDate": "09-07",
       "notes": "Drops of dew on grass.",
       "description": "When drops of dew can be seen on the grass. Swallows leave for the year, and the wagtails sing.",
-      "season": "autumn"
+      "season": "autumn",
+      "hangul": "백로",
+      "hangulRomanized": "Baengno"
     },
     {
       "id": "shubun",
@@ -177,7 +212,9 @@ const data = {
       "startDate": "09-23",
       "notes": "Day and night are of equal length.",
       "description": "Day and night are of equal length. Farmers drain their fields and insects hide underground.",
-      "season": "autumn"
+      "season": "autumn",
+      "hangul": "추분",
+      "hangulRomanized": "Chubun"
     },
     {
       "id": "kanro",
@@ -187,7 +224,9 @@ const data = {
       "startDate": "10-08",
       "notes": "Temperatures begin to drop, crickets stop chirping.",
       "description": "Temperatures begin dropping. The geese return for the winter. Crickets chirp for the last time in the year.",
-      "season": "autumn"
+      "season": "autumn",
+      "hangul": "한로",
+      "hangulRomanized": "Hallo"
     },
     {
       "id": "soko",
@@ -197,7 +236,9 @@ const data = {
       "startDate": "10-23",
       "notes": "The first frosts, maple leaves turn yellow.",
       "description": "The first frosts. Rains disappear as the maple leaves and ivy turn yellow.",
-      "season": "autumn"
+      "season": "autumn",
+      "hangul": "상강",
+      "hangulRomanized": "Sanggang"
     },
     {
       "id": "ritto",
@@ -207,7 +248,9 @@ const data = {
       "startDate": "11-08",
       "notes": "The ground starts to freeze.",
       "description": "When the winter season starts. Land begins to freeze, rivers and streams shortly to follow.",
-      "season": "winter"
+      "season": "winter",
+      "hangul": "입동",
+      "hangulRomanized": "Ipdong"
     },
     {
       "id": "shosetsu",
@@ -217,7 +260,9 @@ const data = {
       "startDate": "11-23",
       "notes": "Light snow, the last leaves have fallen from trees.",
       "description": "Light snowfall appears. Northern winds have blown the last leaves from the trees.",
-      "season": "winter"
+      "season": "winter",
+      "hangul": "소설",
+      "hangulRomanized": "Soseol"
     },
     {
       "id": "taisetsu",
@@ -227,7 +272,9 @@ const data = {
       "startDate": "12-08",
       "notes": "Cold sets in, bears hibernate.",
       "description": "The cold sets in. Bears are hibernating in their dens, and the salmon have swam upstream. Nature is quiet.",
-      "season": "winter"
+      "season": "winter",
+      "hangul": "대설",
+      "hangulRomanized": "Daeseol"
     },
     {
       "id": "toji",
@@ -237,7 +284,9 @@ const data = {
       "startDate": "12-22",
       "notes": "Shortest days of the year.",
       "description": "When days are the shortest in the whole year. Deer in the mountains shed their antlers, and wheat sprouts rest underneath the snow.",
-      "season": "winter"
+      "season": "winter",
+      "hangul": "동지",
+      "hangulRomanized": "Dongji"
     },
     {
       "id": "shokan",
@@ -247,7 +296,9 @@ const data = {
       "startDate": "01-06",
       "notes": "Temperatures quickly drop.",
       "description": "Winter chills start as the temperature quickly drops. Pheasant calls can be heard in the forest",
-      "season": "winter"
+      "season": "winter",
+      "hangul": "소한",
+      "hangulRomanized": "Sohan"
     },
     {
       "id": "daikan",
@@ -257,7 +308,9 @@ const data = {
       "startDate": "01-20",
       "notes": "Ice thickens on the streams, hens huddle together.",
       "description": "Temperatures drop low and the chill deepens. Ice thickens on the streams. Hens huddle together and begin laying eggs.",
-      "season": "winter"
+      "season": "winter",
+      "hangul": "대한",
+      "hangulRomanized": "Daehan"
     }
   ]
 };
@@ -320,11 +373,19 @@ widget.url = "https://smallseasons.guide";
 widget.setPadding(11, 16, 15, 16);
 
 // add text
-let kanji = widget.addText(sekki["kanji"]);
-kanji.textColor = new Color("#000");
-kanji.textOpacity = 0.4;
-kanji.font = Font.thinSystemFont(37);
-kanji.centerAlignText();
+if (language == "japanese") {
+  let kanji = widget.addText(sekki["kanji"]);
+  kanji.textColor = new Color("#000");
+  kanji.textOpacity = 0.4;
+  kanji.font = Font.thinSystemFont(37);
+  kanji.centerAlignText();
+} else {  // korean
+  let kanji = widget.addText(sekki["hangul"]);
+  kanji.textColor = new Color("#000");
+  kanji.textOpacity = 0.4;
+  kanji.font = Font.ultraLightSystemFont(43);  // for hangul, thinSystemFont = lightSystemFont, so go lighter & bigger to yield ideal thickness
+  kanji.centerAlignText();
+}
 
 let meaning = widget.addText(sekki["title"].toUpperCase());
 meaning.textColor = new Color("#000");
