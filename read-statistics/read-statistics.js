@@ -119,7 +119,7 @@ const unreadPlural = data.unread == 1 ? "" : "s";
 
 let headline = widget.addText(`ReAD holds ${data.unread} unread article${unreadPlural}.`);
 headline.textColor = new Color("#000");
-headline.font = Font.mediumSystemFont(14);
+headline.font = Font.mediumSystemFont(16);
 
 widget.addSpacer();
 
@@ -128,7 +128,7 @@ const minutesPlural = minutes == 1 ? "" : "s";
 const archivedTodayPlural = data.archived_today == 1 ? "" : "s";
 const addedTodayPlural = data.added_today == 1 ? "" : "s";
 
-let details = widget.addText(`Today, you've spent ${Math.round(data.reading_time_today/60)} minute${minutesPlural} reading ${data.archived_today} article${archivedTodayPlural} and added ${data.added_today} fresh one${addedTodayPlural}. ${Math.round(data.reading_time_today/60) >= 60 ? "💮" : "📚"}`);
+let details = widget.addText(`Today, you've spent ${Math.round(data.reading_time_today/60)} minute${minutesPlural} reading ${data.archived_today} article${archivedTodayPlural} and added ${data.added_today} fresh one${addedTodayPlural}. ${Math.round(data.reading_time_today/60) >= 60 ? "📚" : ""}`);
 details.textColor = new Color("#555");
 details.shadowRadius = 5;
 details.shadowColor = new Color("#eee");

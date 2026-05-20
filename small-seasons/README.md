@@ -16,5 +16,7 @@ After coming across [smallseasons.guide](https://smallseasons.guide), I liked th
 ![](demo.jpg)
 <sup>The background image of this demo screenshot is taken from a woodblock print by Takahashi Shōtei, downloaded from the [Mokuhankan Collection](https://mokuhankan.com/collection/index.php?id_for_display=00023), which is a rabbit hole worth falling into.</sup>
 
+**New!** There's now also a [Korean mode](https://english.seoul.go.kr/service/amusement/traditional-culture/), see the `language` switch at the top of the code.
+
 **Any setup required?**
 Barely more than for any other Scriptable widget! Download `small-seasons.js` and `small-seasons-background.png` and place them in the "Scriptable" directory in your iCloud Drive. Then, back on your homescreen, [go into jiggle mode](https://www.youtube.com/watch?v=pAOjDXdiUzM) and create a new Scriptable widget of your preferred size. Tap it to assign the relevant script to it, then wait a second for it to draw itself for the first time.
