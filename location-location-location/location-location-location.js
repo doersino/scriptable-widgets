@@ -51,7 +51,7 @@ const cacheDuration = 30;  // days
 const updateInterval = 30;  // minutes
 
 // fallback map tile version
-const fallbackVersion = 995;
+const fallbackVersion = 1008;
 
 ////////////////////////////////////////////////////////////////////////////////
 
